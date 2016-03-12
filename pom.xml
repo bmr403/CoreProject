@@ -3,9 +3,9 @@
 	<modelVersion>4.0.0</modelVersion>
 	<artifactId>CoreProject</artifactId>
 	<groupId>multiModuleProject</groupId>
-	<version>${build-version}</version>
+	<version>${core.version}</version>
 	<packaging>pom</packaging>
-	
+
 	<properties>
 		<cxf.version>2.2.3</cxf.version>
 		<org.hibernate.version>3.5.1-Final</org.hibernate.version>
@@ -16,11 +16,13 @@
 
 		<maven.build.timestamp.format>yyyy-MM-dd HH:mm</maven.build.timestamp.format>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		
-		<build-version>1.0-SNAPSHOT</build-version>
-		
+
+		<core.version>1.0-SNAPSHOT</core.version>
+		<javamodel.version>1.1-SNAPSHOT</javamodel.version>
+		<webservice.version>2.0-SNAPSHOT</webservice.version>
+
 	</properties>
-	
+
 	<dependencies>
 
 		<dependency>
@@ -122,7 +124,7 @@
 
 		<!-- Hibernate annotation -->
 		<!-- JSR 303 with Hibernate Validator -->
-		
+
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-annotations</artifactId>
@@ -134,9 +136,6 @@
 			<version>${org.hibernate.version}</version>
 		</dependency>
 	</dependencies>
-	<modules>
-		<module>../JavaModel</module>
-		<module>../WebServiceProject</module>
-	</modules>
+
 	
 </project>
