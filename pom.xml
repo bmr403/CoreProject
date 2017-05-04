@@ -1,9 +1,8 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<artifactId>CoreProject</artifactId>
 	<groupId>multiModuleProject</groupId>
-	<version>${core.version}</version>
+	<version>1.0</version>
 	<packaging>pom</packaging>
 
 	<properties>
@@ -18,8 +17,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
 		<core.version>1.0-SNAPSHOT</core.version>
-		<javamodel.version>1.1-SNAPSHOT</javamodel.version>
-		<webservice.version>2.0-SNAPSHOT</webservice.version>
+		<javamodel.version>1.0-SNAPSHOT</javamodel.version>
 
 	</properties>
 
@@ -137,5 +135,38 @@
 		</dependency>
 	</dependencies>
 
+	<scm>
+		<connection>scm:git:https://github.com/bmr403/JavaModel.git</connection>
+		
+	  <tag>1.0</tag>
+	</scm> 
 	
+	<distributionManagement>
+		<repository>
+			<id>nexus</id>
+			<name>Nexus Repository</name>
+			<url>http://127.0.0.1:8081/nexus/content/repositories/releases/</url>
+		</repository>
+		<snapshotRepository>
+			<id>nexus</id>
+			<name>Nexus Repository</name>
+			<url>http://127.0.0.1:8081/nexus/content/repositories/snapshots/</url>
+		</snapshotRepository>
+	</distributionManagement>
+	
+	<build>
+		<plugins>
+	<plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-release-plugin</artifactId>
+        <version>2.5.3</version>
+		<configuration>
+        <checkModificationExcludes>
+            <checkModificationExclude>pom.xml</checkModificationExclude>
+			<checkModificationExclude>target/**</checkModificationExclude>
+        </checkModificationExcludes>
+    </configuration>
+      </plugin>
+	</plugins>
+	</build>
 </project>
