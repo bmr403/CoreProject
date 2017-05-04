@@ -2,7 +2,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<artifactId>CoreProject</artifactId>
 	<groupId>multiModuleProject</groupId>
-	<version>${core.version}</version>
+	<version>1.0</version>
 	<packaging>pom</packaging>
 
 	<properties>
@@ -15,8 +15,6 @@
 
 		<maven.build.timestamp.format>yyyy-MM-dd HH:mm</maven.build.timestamp.format>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-
-		<core.version>1.0-SNAPSHOT</core.version>
 		<javamodel.version>1.0-SNAPSHOT</javamodel.version>
 
 	</properties>
