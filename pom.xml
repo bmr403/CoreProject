@@ -2,7 +2,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<artifactId>CoreProject</artifactId>
 	<groupId>multiModuleProject</groupId>
-	<version>1.1</version>
+	<version>1.2-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
 	<properties>
@@ -135,7 +135,7 @@
 	<scm>
 		<connection>scm:git:https://github.com/bmr403/CoreProject.git</connection>
 		
-	  <tag>1.1</tag>
+	  <tag>${project.version}</tag>
 	</scm> 
 	
 	<distributionManagement>
