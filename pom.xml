@@ -134,7 +134,7 @@
 	</dependencies>
 
 	<scm>
-		<connection>scm:git:https://github.com/bmr403/JavaModel.git</connection>
+		<connection>scm:git:https://github.com/bmr403/CoreProject.git</connection>
 		
 	  <tag>1.0</tag>
 	</scm> 
