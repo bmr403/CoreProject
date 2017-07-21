@@ -163,11 +163,12 @@
 					<flowInitContext>
 										 	
 						 <masterBranchName>master</masterBranchName>
-						 <!-- <featureBranchPrefix>feature/</featureBranchPrefix>
-						 <developBranchName>development</developBranchName>
-						 <releaseBranchPrefix>release/</releaseBranchPrefix>
-						 <hotfixBranchPrefix>patch/</hotfixBranchPrefix>
-						 <versionTagPrefix>master-</versionTagPrefix>	 -->											 
+						 <featureBranchPrefix>feature/</featureBranchPrefix>
+						<!--  <developBranchName>development</developBranchName> -->
+						<!-- <developBranchName>1.0-SNAPSHOT</developBranchName>  -->
+						 <!-- <releaseBranchPrefix>release/</releaseBranchPrefix> -->
+						 <hotfixBranchPrefix>patch-</hotfixBranchPrefix>
+						 <versionTagPrefix>master-</versionTagPrefix>											 
 						 
 						
 					  </flowInitContext>
@@ -180,12 +181,12 @@
 					   <defaultOriginUrl>https://github.com/bmr403/CoreProject.git</defaultOriginUrl>
 					   <username>manjunath@bpatech.com</username>
 					   <password>Abcdefg@123</password>
-					   <!-- <enableSshAgent>true</enableSshAgent> -->
-					   <!--
-					   <pushReleases>true</pushReleases>
+					   <enableSshAgent>true</enableSshAgent>
+					   
+					  <!--  <pushReleases>true</pushReleases>
 					   <keepBranch>false</keepBranch>
-					   <pushHotfixes>true</pushHotfixes>
-					   -->
+					   <pushHotfixes>true</pushHotfixes> -->
+					  
 					   <noReleaseBuild>true</noReleaseBuild>
 					   <!-- ESERVICES-5258 First Commit here -->
 				</configuration>
