@@ -187,7 +187,6 @@
 					   <pushHotfixes>true</pushHotfixes> -->
 					  
 					   <noReleaseBuild>true</noReleaseBuild>
-					   <!-- ESERVICES-5258 First Commit here -->
 				</configuration>
         	</plugin>
 		
