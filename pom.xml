@@ -160,7 +160,7 @@
 				<version>1.0-m5.1</version>
 				<configuration>
 					
-					<flowInitContext>
+					<!-- <flowInitContext>
 										 	
 						 <masterBranchName>master</masterBranchName>
 						 <featureBranchPrefix>feature/</featureBranchPrefix>
@@ -170,7 +170,7 @@
 						 <versionTagPrefix>master-</versionTagPrefix>											 
 						 
 						
-					  </flowInitContext>
+					  </flowInitContext> -->
 					   
 					   
 					<pushFeatures>true</pushFeatures>
