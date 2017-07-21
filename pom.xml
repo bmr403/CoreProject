@@ -165,7 +165,7 @@
 						 <masterBranchName>master</masterBranchName>
 						 <featureBranchPrefix>feature/</featureBranchPrefix>
 						 <developBranchName>develop</developBranchName>
-						 <releaseBranchPrefix></releaseBranchPrefix>
+						 <releaseBranchPrefix />
 						 <hotfixBranchPrefix>patch-</hotfixBranchPrefix>
 						 <versionTagPrefix>master-</versionTagPrefix>											 
 						 
