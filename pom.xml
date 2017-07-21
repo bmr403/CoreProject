@@ -164,9 +164,8 @@
 										 	
 						 <masterBranchName>master</masterBranchName>
 						 <featureBranchPrefix>feature/</featureBranchPrefix>
-						<!--  <developBranchName>development</developBranchName> -->
-						<!-- <developBranchName>1.0-SNAPSHOT</developBranchName>  -->
-						 <!-- <releaseBranchPrefix>release/</releaseBranchPrefix> -->
+						 <developBranchName>develop</developBranchName>
+						 <releaseBranchPrefix></releaseBranchPrefix>
 						 <hotfixBranchPrefix>patch-</hotfixBranchPrefix>
 						 <versionTagPrefix>master-</versionTagPrefix>											 
 						 
