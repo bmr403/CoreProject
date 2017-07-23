@@ -2,7 +2,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<artifactId>CoreProject</artifactId>
 	<groupId>multiModuleProject</groupId>
-	<version>${core.version}</version>
+	<version>1.0</version>
 	<packaging>pom</packaging>
 
 	<properties>
@@ -15,9 +15,6 @@
 
 		<maven.build.timestamp.format>yyyy-MM-dd HH:mm</maven.build.timestamp.format>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-
-		<core.version>1.0-SNAPSHOT</core.version>
-		<javamodel.version>1.0-SNAPSHOT</javamodel.version>
 
 	</properties>
 
@@ -136,37 +133,62 @@
 	</dependencies>
 
 	<scm>
-		<connection>scm:git:https://github.com/bmr403/JavaModel.git</connection>
+		<connection>scm:git:https://github.com/bmr403/CoreProject.git</connection>
 		
-	  <tag>1.0</tag>
+	  <tag>${project.version}</tag>
 	</scm> 
 	
 	<distributionManagement>
 		<repository>
 			<id>nexus</id>
 			<name>Nexus Repository</name>
-			<url>http://127.0.0.1:8081/nexus/content/repositories/releases/</url>
+			<url>http://192.168.1.13:8081/nexus/content/repositories/releases/</url>
 		</repository>
 		<snapshotRepository>
 			<id>nexus</id>
 			<name>Nexus Repository</name>
-			<url>http://127.0.0.1:8081/nexus/content/repositories/snapshots/</url>
+			<url>http://192.168.1.13:8081/nexus/content/repositories/snapshots/</url>
 		</snapshotRepository>
 	</distributionManagement>
 	
 	<build>
 		<plugins>
-	<plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-release-plugin</artifactId>
-        <version>2.5.3</version>
-		<configuration>
-        <checkModificationExcludes>
-            <checkModificationExclude>pom.xml</checkModificationExclude>
-			<checkModificationExclude>target/**</checkModificationExclude>
-        </checkModificationExcludes>
-    </configuration>
-      </plugin>
+		
+		<plugin>
+				<groupId>external.atlassian.jgitflow</groupId>
+				<artifactId>jgitflow-maven-plugin</artifactId>
+				<version>1.0-m5.1</version>
+				<configuration>
+					
+					<flowInitContext>
+										 	
+						 <masterBranchName>master</masterBranchName>
+						 <featureBranchPrefix>feature/</featureBranchPrefix>
+						 <developBranchName>develop</developBranchName>
+						 <releaseBranchPrefix>matrix-</releaseBranchPrefix>
+						 <hotfixBranchPrefix>patch-</hotfixBranchPrefix>
+						 <versionTagPrefix>master-</versionTagPrefix>											 
+					  </flowInitContext> 
+					   
+					   
+					<pushFeatures>true</pushFeatures>
+					<allowSnapshots>false</allowSnapshots>
+					<updateDependencies>true</updateDependencies>
+					   <allowUntracked>false</allowUntracked>
+					   <defaultOriginUrl>https://github.com/bmr403/CoreProject.git</defaultOriginUrl>
+					   <username>manjunath@bpatech.com</username>
+					   <password>Abcdefg@123</password>
+					   <enableSshAgent>true</enableSshAgent>
+					   
+					  <!--  <pushReleases>true</pushReleases>
+					   <keepBranch>false</keepBranch>
+					   <pushHotfixes>true</pushHotfixes> -->
+					  
+					   <noReleaseBuild>false</noReleaseBuild>
+				</configuration>
+        	</plugin>
+		
+		
 	</plugins>
 	</build>
 </project>
